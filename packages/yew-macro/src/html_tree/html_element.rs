@@ -431,8 +431,9 @@ impl ToTokens for HtmlElement {
                     #[allow(clippy::redundant_clone, unused_braces, clippy::let_and_return)]
                     let mut #vtag = match () {
                         _ if "input".eq_ignore_ascii_case(::std::convert::AsRef::<::std::primitive::str>::as_ref(&#vtag_name)) => {
-                            ::yew::virtual_dom::VTag::__new_textarea(
+                            ::yew::virtual_dom::VTag::__new_input(
                                 #value,
+                                #checked,
                                 #node_ref,
                                 #key,
                                 #attributes,
